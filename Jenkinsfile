@@ -19,8 +19,10 @@ pipeline {
     }
 
     stage('Publish Tests') {    //From plugins.jenkins.io/junit
-    junit 'test-results.xml'
-     }
+    steps {
+      junit 'test-results.xml'
+      }
+    }
 
 }
 
