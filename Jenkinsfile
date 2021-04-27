@@ -21,7 +21,7 @@ pipeline {
 }
 post {  //https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline
       always {
-        junit '**/reports/junit/*.xml'
+        junit '**/target/surefire-reports/*.xml'
       }
    } 
 
