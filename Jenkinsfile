@@ -19,7 +19,7 @@ pipeline {
           sh 'mvn -Dtest=Time12SubtractTest test'
       }
     }
-    stage('Run Time12 Test') {      
+    stage('Run DateLessThan Test') {      
       steps {
           sh 'mvn -Dtest=DateLessThanTest test'
       }
