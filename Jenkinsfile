@@ -18,13 +18,17 @@ pipeline {
       }
     }
 
-    stage('Publish Tests') {    //From plugins.jenkins.io/junit
-    steps {
-      junit 'test-results.xml'
+}
+post {  //https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline
+      always {
+        junit '**/reports/junit/*.xml'
       }
-    }
+   } 
 
 }
 
-}
 
+
+//  stage('Publish test results') {
+//       junit '**/test-results/test/*.xml'
+//   } 
