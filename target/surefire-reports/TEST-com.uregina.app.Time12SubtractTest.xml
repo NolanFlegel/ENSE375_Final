@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.uregina.app.Time24Test" time="0.001" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.uregina.app.Time12SubtractTest" time="0.017" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="11"/>
@@ -55,11 +55,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="ConvertnegativeFalse" classname="com.uregina.app.Time24Test" time="0"/>
-  <testcase name="Convert1pmTrue" classname="com.uregina.app.Time24Test" time="0"/>
-  <testcase name="Convert12AmTrue" classname="com.uregina.app.Time24Test" time="0"/>
-  <testcase name="Convert11pmTrue" classname="com.uregina.app.Time24Test" time="0"/>
-  <testcase name="Convert1259AmTrue" classname="com.uregina.app.Time24Test" time="0"/>
-  <testcase name="Convert12pmTrue" classname="com.uregina.app.Time24Test" time="0"/>
-  <testcase name="ConvertOver13False" classname="com.uregina.app.Time24Test" time="0"/>
+  <testcase name="Subtract12amfrom1159" classname="com.uregina.app.Time12SubtractTest" time="0.015"/>
+  <testcase name="Subtract12amfrom12am" classname="com.uregina.app.Time12SubtractTest" time="0"/>
+  <testcase name="Subtract12pmfrom12pm" classname="com.uregina.app.Time12SubtractTest" time="0.001"/>
+  <testcase name="Subtract1159from12am" classname="com.uregina.app.Time12SubtractTest" time="0"/>
 </testsuite>

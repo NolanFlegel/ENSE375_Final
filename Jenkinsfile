@@ -9,12 +9,14 @@ pipeline {
                 }
 
  stages {
-
-    
-
     stage('Run Time24 Test') {      
       steps {
           sh 'mvn -Dtest=Time24Test test'
+      }
+    }
+    stage('Run Time12 Test') {      
+      steps {
+          sh 'mvn -Dtest=Time12SubtractTest test'
       }
     }
 
