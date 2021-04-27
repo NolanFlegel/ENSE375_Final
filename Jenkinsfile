@@ -10,42 +10,18 @@ pipeline {
 
  stages {
 
-    /*stage('Cloning our Git') { 
-      steps {
-        git 'https://github.com/NolanFlegel/ENSE375.git'
-      }
-    }*/
+    
 
-    stage('Run Time24 Test') {
-      
+    stage('Run Time24 Test') {      
       steps {
           sh 'mvn -Dtest=Time24Test test'
       }
     }
 
-  //   stage('Building Image') {
-  //     steps {
-  //       script {
-  //         dockerImage = docker.build registry + ":$BUILD_NUMBER"
-  //       }
-  //     }
-  //   }
+    stage('Publish Tests') {    //From plugins.jenkins.io/junit
+    junit 'test-results.xml'
+     }
 
-  // stage('Deploy Image') {
-  //   steps {
-  //     script {
-  //       docker.withRegistry( '', registryCredential ) {
-  //         dockerImage.push()
-  //       }
-  //     }
-  //   }
-  // }
-
-  // stage('Cleaning up') {
-  //   steps {
-  //     sh "docker rmi $registry:$BUILD_NUMBER"
-  //   }
-  // }
 }
 
 }
