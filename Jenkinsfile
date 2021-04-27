@@ -1,13 +1,6 @@
   
 pipeline {
 
-  environment {
-  registry = ""
-  registryCredential = ''
-  dockerImage = ''
-  }
-
- agent any
  stages {
 
     /*stage('Cloning our Git') { 
@@ -16,7 +9,7 @@ pipeline {
       }
     }*/
 
-    stage('Change Directory and Run Tests') {
+    stage('Run Tests') {
       agent {
             docker {
                 image 'maven:3-alpine'
@@ -25,10 +18,7 @@ pipeline {
 
                 }
       steps {
-         
-       {
           sh 'mvn clean test'
-        }
       }
     }
 
