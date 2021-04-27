@@ -19,6 +19,11 @@ pipeline {
           sh 'mvn -Dtest=Time12SubtractTest test'
       }
     }
+    stage('Run Time12 Test') {      
+      steps {
+          sh 'mvn -Dtest=DateLessThanTest test'
+      }
+    }
 
 }
 post {  //https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline
