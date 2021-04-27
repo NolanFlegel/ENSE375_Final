@@ -16,10 +16,10 @@ pipeline {
       }
     }*/
 
-    stage('Run Tests') {
+    stage('Run Time24 Test') {
       
       steps {
-          sh 'mvn clean test'
+          sh 'mvn -Dtest=Time24Test test'
       }
     }
 

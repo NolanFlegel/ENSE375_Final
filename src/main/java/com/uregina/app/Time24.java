@@ -50,6 +50,21 @@ public class Time24
 		Time24 time=null;
 		//Todo : add your code here
 
+		if(hours < 0 || hours > 13){
+			return null;
+		}
+
+		if (am_pm == AmPm.am && hours == 12){
+			hours = hours - 12;
+		}else if (am_pm == AmPm.pm && hours < 12){
+			hours = hours + 12;
+		}
+
+		try{
+			time = new Time24(hours, minutes);
+		} catch (Exception e){}
+		
+		
 
 		// End of your code
 		return time;
