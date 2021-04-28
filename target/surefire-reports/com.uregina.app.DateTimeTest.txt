@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.uregina.app.DateTimeTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.047 s <<< FAILURE! - in com.uregina.app.DateTimeTest
-SameDateTrue(com.uregina.app.DateTimeTest)  Time elapsed: 0.047 s  <<< FAILURE!
-java.lang.AssertionError: expected:<720> but was:<-720>
-	at com.uregina.app.DateTimeTest.SameDateTrue(DateTimeTest.java:23)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in com.uregina.app.DateTimeTest

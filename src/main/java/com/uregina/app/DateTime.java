@@ -58,10 +58,13 @@ public class DateTime
 
 		if(d1.lessThan(d1,d2)){
 			if (date1.equal(date1, date2) || date1.equal(date1.nextDate(),date2)){
-				// time1 = d1.getTime();
-				// time2 = d2.getTime();
-				diff = d1.getTime().subtract(d1.getTime(),d2.getTime());
-				// diff = time1.subtract(time1,time2);
+			
+				if(d1.getTime().lessThan(d1.getTime(),d2.getTime())){
+					diff = d1.getTime().subtract(d1.getTime(),d2.getTime());
+					if (date1.equal(date1.nextDate(),date2)){
+						diff = diff - 1440;  // add a day
+					}
+				}
 			}else{
 				throw new MoreThanOneDayException();
 			}
