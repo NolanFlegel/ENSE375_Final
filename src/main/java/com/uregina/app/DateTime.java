@@ -51,7 +51,21 @@ public class DateTime
 	{
 		int diff=0;
 		//Todo: add your code here
+		Date nextDate = d1.getDate();
+		nextDate = nextDate.nextDate();
+		Date date1 = d1.getDate();
+		Date date2 = d2.getDate();
 
+		if(d1.lessThan(d1,d2)){
+			if (date1.equal(date1, date2) || date1.equal(date1.nextDate(),date2)){
+				// time1 = d1.getTime();
+				// time2 = d2.getTime();
+				diff = d1.getTime().subtract(d1.getTime(),d2.getTime());
+				// diff = time1.subtract(time1,time2);
+			}else{
+				throw new MoreThanOneDayException();
+			}
+		}
 		//end of your code
 		return diff;
 	}
